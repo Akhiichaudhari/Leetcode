@@ -1,0 +1,11 @@
+# Given an integer array nums and an integer k, return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k.
+
+
+class Solution:
+    def countKDifference(self, nums: List[int], k: int) -> int:
+        count = 0
+        for i in range(len(nums) - 1) :
+            for j in range(len(nums)) :
+                if i < j and abs(nums[i] - nums[j]) == k :
+                    count += 1
+        return count
