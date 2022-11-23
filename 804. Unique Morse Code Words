@@ -1,0 +1,25 @@
+# International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:
+
+# 'a' maps to ".-",
+# 'b' maps to "-...",
+# 'c' maps to "-.-.", and so on.
+
+class Solution:
+    def uniqueMorseRepresentations(self, words: List[str]) -> int:
+        l = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..",
+     "--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        output_list = []
+        dict = {}
+        for i in range(len(l)) :
+            dict[chr(i + 97)] = l[i]
+
+
+        for i in words :
+            strr = ''
+            for j in range(len(i)) :
+                value = dict[i[j]]
+                strr = strr + value
+            if strr not in output_list :
+                output_list.append(strr)
+        return len(output_list)
+        
