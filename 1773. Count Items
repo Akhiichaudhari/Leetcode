@@ -1,0 +1,10 @@
+def countMatches(items, ruleKey, ruleValue) :
+    count = 0
+    for i in items:
+        if ruleKey == 'type' and i[0] == ruleValue:
+            count += 1
+        if ruleKey == 'name' and i[2] == ruleValue:
+            count += 1
+        if ruleKey == 'color' and i[1] == ruleValue :
+            count = count + 1
+    return count
