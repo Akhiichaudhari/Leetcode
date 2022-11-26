@@ -1,0 +1,14 @@
+class Solution:
+    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
+        strr = ''
+        strs = ''
+        for i in range(len(word1)) :
+            strr = strr + word1[i]
+        for i in range(len(word2)) :
+            strs = strs + word2[i]
+            
+        if strr == strs :
+            return True
+        else :
+            return False
+        
